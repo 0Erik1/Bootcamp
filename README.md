@@ -40,6 +40,7 @@ Para verificar os dados brutos enviados ao AEM:
 
 ##Diagrama
 
+
 graph TD
     subgraph "External Systems"
         Shopify[Shopify Plus]
@@ -54,13 +55,11 @@ graph TD
         Hydro[Hydrogen / Remix]
     end
 
-    %% Integrações
     AC -- "1. REST API (Products)" --> AEM
     Shopify -- "2. Storefront API (GraphQL)" --> Hydro
     AEM -- "3. Content Fragments (GraphQL)" --> Hydro
     AEM -- "4. Experience Fragments (JSON)" --> AC
     
-    %% Dashboard
     Hydro -- "5. Health Check" --> AC
     Hydro -- "5. Health Check" --> AEM
     Hydro -- "5. Health Check" --> Shopify
@@ -68,6 +67,8 @@ graph TD
     style Hydro fill:#f9f,stroke:#333,stroke-width:2px
     style AEM fill:#00f2,stroke:#333,stroke-width:2px
     style AC fill:#f60,stroke:#333,stroke-width:2px
+    
+---
 
 P### 🔌 Tabela de Endpoints
 Relação técnica das APIs utilizadas no projeto integrado:
