@@ -40,7 +40,7 @@ Para verificar os dados brutos enviados ao AEM:
 
 ##Diagrama
 
-
+```mermaid
 graph TD
     subgraph "External Systems"
         Shopify[Shopify Plus]
@@ -67,7 +67,8 @@ graph TD
     style Hydro fill:#f9f,stroke:#333,stroke-width:2px
     style AEM fill:#00f2,stroke:#333,stroke-width:2px
     style AC fill:#f60,stroke:#333,stroke-width:2px
-    
+```
+
 ---
 
 P### 🔌 Tabela de Endpoints
