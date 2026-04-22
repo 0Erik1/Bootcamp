@@ -1,0 +1,116 @@
+<sly data-sly-use.model="com.bootcamp.core.models.ProductShowcaseImpl" />
+
+<style>
+    .product-showcase-container {
+        font-family: 'Arial', sans-serif;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    /* Grade que coloca os produtos lado a lado */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    /* Estilo de cada Card de produto */
+    .product-item {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .product-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .product-image img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+
+    .product-stack {
+        display: inline-block;
+        background: #e44d26;
+        color: #fff;
+        font-size: 10px;
+        padding: 3px 8px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .product-name {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #333;
+        height: 50px; /* Mantém o alinhamento mesmo com nomes longos */
+        overflow: hidden;
+    }
+
+    .product-sku {
+        color: #888;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .product-price {
+        font-size: 22px;
+        font-weight: bold;
+        color: #27ae60;
+        margin: 15px 0;
+    }
+
+    .add-to-cart {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        width: 100%;
+    }
+
+    .add-to-cart:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="product-showcase-container">
+    <h2 style="text-align: center; margin-bottom: 30px;">Loja Bootcamp 2026</h2>
+
+    <p data-sly-test="${!model.products}" style="text-align: center; color: red;">
+        Nenhum produto encontrado. Verifique a conexão com o Adobe Commerce.
+    </p>
+
+    <div class="product-grid" data-sly-list.product="${model.products}">
+        <div class="product-item">
+            
+            <div class="product-image">
+                <img src="https://via.placeholder.com/200x150?text=Camiseta+Bootcamp" alt="${product.name}">
+            </div>
+            
+            <div class="product-info">
+                <span class="product-stack" data-sly-test="${product.techStack}">${product.techStack}</span>
+                <h3 class="product-name">${product.name}</h3>
+                <p class="product-sku">REF: ${product.sku}</p>
+                
+                <p class="product-price">
+                    R$ ${product.price}
+                </p>
+                
+                <button class="add-to-cart">Ver Detalhes</button>
+            </div>
+        </div>
+    </div>
+</div>

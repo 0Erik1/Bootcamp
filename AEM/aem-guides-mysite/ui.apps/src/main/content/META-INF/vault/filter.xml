@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/bootcamp-ErikPinheiro/clientlibs"/>
+    <filter root="/apps/bootcamp-ErikPinheiro/components"/>
+    <filter root="/apps/bootcamp-ErikPinheiro/i18n"/>
+</workspaceFilter>

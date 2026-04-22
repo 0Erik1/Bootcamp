@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/bootcamp-ErikPinheiro" mode="merge"/>
+    <filter root="/content/bootcamp-ErikPinheiro" mode="merge"/>
+    <filter root="/content/dam/bootcamp-ErikPinheiro" mode="merge">
+        <exclude pattern="/content/dam/bootcamp-ErikPinheiro(/.*)?"/>
+        <include pattern="/content/dam/bootcamp-ErikPinheiro/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/bootcamp-ErikPinheiro/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/bootcamp-ErikPinheiro" mode="merge"/>
+</workspaceFilter>
