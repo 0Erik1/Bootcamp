@@ -1,0 +1,22 @@
+<?php
+/** @var \Bootcamp\AemContent\Block\AemBanner $block */
+$bannerData = $block->getAemBannerData();
+
+// Pegamos o caminho relativo que vem do JSON
+$imageSrc = $bannerData[':items']['root'][':items']['image']['src'] ?? null;
+?>
+
+<?php if ($imageSrc): ?>
+    <div class="aem-banner-container" style="text-align: center; margin: 20px 0;">
+        <div style="border: 3px solid #e41e31; display: inline-block; padding: 10px; background: #fff;">
+            
+            <img src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fbrindes.com%2F-287&ved=0CBYQjRxqFwoTCPjzrYDh_5MDFQAAAAAdAAAAABAG&opi=89978449" 
+     alt="Teste Imagem Publica" 
+     style="max-width: 100%; height: auto; display: block; border: 5px solid blue;">
+            
+            <button style="margin-top: 15px; background: #282828; color: white; padding: 10px 20px; border: none; cursor: pointer; font-weight: bold;">
+                COMPRAR AGORA
+            </button>
+        </div>
+    </div>
+<?php endif; ?>
