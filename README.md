@@ -45,7 +45,7 @@ graph TD
         Shopify[Shopify Plus]
     end
 
-   subgraph "Adobe Experience Cloud"
+    subgraph "Adobe Experience Cloud"
         AEM[AEM Author/Publish]
         AC[Adobe Commerce]
     end
