@@ -79,5 +79,3 @@ Relação técnica das APIs utilizadas no projeto integrado:
 | **Adobe Commerce** | REST | `/rest/V1/bootcamp/products` | Anonymous |
 | **AEM GraphQL** | GraphQL | `/content/graphql/global` | Basic Auth (admin:admin) |
 | **AEM JSON** | JSON Export | `.../master.model.json` | Basic Auth |
-| **Shopify** | GraphQL | `Storefront API` | Access Token |
-| **Dashboard** | Frontend | `/dashboard` | N/A |
