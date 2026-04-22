@@ -23,7 +23,7 @@ Localizado na pasta `/AEM`:
 Atualmente, o módulo `AemContent` no Magento consegue realizar a chamada ao AEM e receber o JSON correspondente ao **Experience Fragment**. 
 
 Entretanto, a integração do banner está em estágio parcial:
-* **Status:** O JSON é recebido com sucesso, mas a renderização da imagem no frontend do Magento apresenta limitações (a imagem não é exibida corretamente devido ao mapeamento de caminhos binários do AEM).
+* **Status:** O JSON é recebido com sucesso, mas a renderização da imagem no frontend do Magento apresenta limitações.
 * **Próximo Passo:** Ajustar o parser do componente para tratar URLs absolutas de assets vindas do AEM Service.
 
 ---
